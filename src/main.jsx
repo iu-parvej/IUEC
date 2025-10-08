@@ -1,10 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+// src/main.jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
 import IUEC_Platform from "./IUEC_Platform.jsx";
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <IUEC_Platform />
+  </React.StrictMode>
+);
