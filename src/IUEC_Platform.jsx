@@ -12,9 +12,26 @@ const EMERALD = '#10b981';
 // Provided global variables (MUST be defined for Canvas environment)
 // *** MODIFIED FOR VERCEL DEPLOYMENT ***
 // If process.env variables exist (on Vercel), use them. Otherwise, fall back to Canvas variables.
-const appId = process.env.REACT_APP_APP_ID || (typeof __app_id !== 'undefined' ? __app_id : 'default-app-id');
-const firebaseConfig = process.env.REACT_APP_FIREBASE_CONFIG ? JSON.parse(process.env.REACT_APP_FIREBASE_CONFIG) : (typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {});
-const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+// UPDATED (for Vite + Vercel)
+const appId =
+  (import.meta.env && import.meta.env.VITE_APP_ID) ||
+  (typeof __app_id !== "undefined" ? __app_id : "default-app-id");
+
+let firebaseConfig = {};
+try {
+  if (import.meta.env && import.meta.env.VITE_FIREBASE_CONFIG) {
+    firebaseConfig = JSON.parse(import.meta.env.VITE_FIREBASE_CONFIG);
+  } else if (typeof __firebase_config !== "undefined") {
+    firebaseConfig = JSON.parse(__firebase_config);
+  }
+} catch (e) {
+  console.error("Failed to parse Firebase config from env:", e);
+  firebaseConfig = {};
+}
+
+const initialAuthToken =
+  typeof __initial_auth_token !== "undefined" ? __initial_auth_token : null;
+
 
 // Admin Credentials (Used INTERNALLY for demo bypass ONLY)
 const ADMIN_EMAIL = 'official.parvej.hossain@gmail.com'; 
