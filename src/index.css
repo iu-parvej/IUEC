@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 /* Ensure body uses Inter font, if not already globally defined */
 body {
     font-family: 'Inter', sans-serif;
