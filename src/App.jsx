@@ -188,7 +188,7 @@ const FirebaseProvider = ({ children }) => {
             console.log('Seeding default content blocks...');
             await setDoc(contentRef, {
                 published: [
-                    { id: generateId('hero'), type: 'HeroBanner', data: { title: 'Join the Islamic University Earth Club Revolution', subtitle: 'Leading sustainable change at Islamic University.', ctaText: 'Click to become a member', ctaLink: '#/register' }, order: 0 },
+                    { id: generateId('hero'), type: 'HeroBanner', data: { title: 'Join the Islamic University Earth Club Revolution', subtitle: 'Leading sustainable change at Islamic Univer sity.', ctaText: 'Click to become a member', ctaLink: '#/register' }, order: 0 },
                     { id: generateId('text'), type: 'RichText', data: { content: '<p><strong>Our Mission:</strong> To cultivate a culture of sustainability and environmental stewardship among students, faculty, and the wider community.</p><p>We focus on waste reduction, biodiversity, and carbon footprint mitigation.</p>' }, order: 1 },
                     { id: generateId('stats'), type: 'Stats/Counters', data: { stats: [ { icon: 'TreePine', value: 1250, label: 'Trees Planted' }, { icon: 'Users', value: 540, label: 'Active Members' }, { icon: 'Recycle', value: 25, label: 'Tons Waste Diverted' } ] }, order: 2 },
                     { id: generateId('chart'), type: 'ChartSimulation', data: { title: '2024 Waste Diversion Goal', chartData: [ { label: 'Paper', value: 45 }, { label: 'Plastic', value: 25 }, { label: 'E-Waste', value: 15 }, { label: 'Glass', value: 15 } ] }, order: 3 },
