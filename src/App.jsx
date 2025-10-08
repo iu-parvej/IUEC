@@ -1209,11 +1209,11 @@ const ThankYouPage = () => {
         <div className="flex items-center justify-center min-h-screen bg-indigo-50">
             <Card className="max-w-2xl text-center py-12 px-10 shadow-2xl border-t-8 border-emerald-500">
                 <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-6 animate-pulse" />
-                <h1 className="text-4xl font-extrabold text-gray-800 mb-4">Thank You for Joining!</h1>
+                <h1 className="4xl font-extrabold text-gray-800 mb-4">Thank You for Joining!</h1>
                 <p className="text-xl text-gray-600 mb-6">
                     Congratulations! Your membership in the **Islamic University Earth Club (IUEC)** is confirmed.
                 </p>
-                <p className="text-lg text-gray-700">
+                <p className="lg text-gray-700">
                     Your commitment to sustainability is vital. Clear next steps:
                     <ul className="list-disc list-inside text-left mt-4 mx-auto max-w-sm space-y-2">
                         <li>You will receive a welcome email with your member ID shortly.</li>
@@ -1453,7 +1453,7 @@ const RegisterPage = ({ navigate }) => {
                 {/* Current Segment Content */}
                 {currentSegment && (
                     <>
-                        <h2 className="text-2xl font-bold text-indigo-700 mb-6 border-b pb-2">{currentSegment.title}</h2>
+                        <h2 className="2xl font-bold text-indigo-700 mb-6 border-b pb-2">{currentSegment.title}</h2>
                         {currentSegment.fields.map(field => (
                             <FieldRenderer
                                 key={field.id}
